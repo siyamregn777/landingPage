@@ -1,3 +1,5 @@
+import defaultTheme from 'tailwindcss/defaultTheme';
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -5,6 +7,10 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    screens: {
+      ...defaultTheme.screens,
+      wide: "1440px"
+    },
     fontSize: {
       xs: ['12px', '16px'],
       sm: ['14px', '20px'],
@@ -35,9 +41,6 @@ export default {
         'hero': "url('assets/images/collection-background.svg')",
         'card': "url('assets/images/thumbnail-background.svg')",
       },
-      screens: {
-        "wide": "1440px"
-      }
     },
   },
   plugins: [],
